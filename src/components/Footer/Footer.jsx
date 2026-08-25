@@ -24,6 +24,7 @@ function Footer() {
 
     visible: {
       opacity: 1,
+
       transition: {
         staggerChildren: 0.15,
       },
@@ -40,6 +41,7 @@ function Footer() {
     visible: {
       opacity: 1,
       y: 0,
+
       transition: {
         duration: 0.7,
         ease: "easeOut",
@@ -59,6 +61,7 @@ function Footer() {
       opacity: 1,
       scale: 1,
       y: 0,
+
       transition: {
         duration: 0.4,
         ease: "easeOut",
@@ -68,6 +71,7 @@ function Footer() {
 
 
   return (
+
     <footer className="footer">
 
       {/* ========================================
@@ -183,36 +187,28 @@ function Footer() {
 
           <h3>Quick Links</h3>
 
-          <motion.div
-            whileHover={{ x: 5 }}
-          >
-            <Link to="/brownie">
+          <motion.div whileHover={{ x: 5 }}>
+            <Link to="/">
               Home
             </Link>
           </motion.div>
 
 
-          <motion.div
-            whileHover={{ x: 5 }}
-          >
+          <motion.div whileHover={{ x: 5 }}>
             <Link to="/category">
               Category
             </Link>
           </motion.div>
 
 
-          <motion.div
-            whileHover={{ x: 5 }}
-          >
+          <motion.div whileHover={{ x: 5 }}>
             <Link to="/about">
               About
             </Link>
           </motion.div>
 
 
-          <motion.div
-            whileHover={{ x: 5 }}
-          >
+          <motion.div whileHover={{ x: 5 }}>
             <Link to="/contact">
               Contact
             </Link>
@@ -352,7 +348,9 @@ function Footer() {
 
 
         <p className="footer-made">
+
           Made with{" "}
+
           <motion.span
             animate={{
               scale: [1, 1.2, 1],
@@ -364,8 +362,10 @@ function Footer() {
             }}
           >
             <FaHeart />
-          </motion.span>{" "}
-          for brownie lovers
+          </motion.span>
+
+          {" "}for brownie lovers
+
         </p>
 
       </motion.div>
