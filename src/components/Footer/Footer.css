@@ -1,0 +1,558 @@
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+  width: 100%;
+
+  background: #2b1b14;
+  color: #ffffff;
+}
+
+
+/* ========================================
+   FOOTER CONTAINER
+======================================== */
+
+.footer-container {
+  width: 100%;
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  padding: 70px 8% 55px;
+
+  display: grid;
+
+  grid-template-columns: 1.4fr 0.8fr 0.8fr 1.3fr;
+
+  gap: 50px;
+
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   FOOTER BRAND
+======================================== */
+
+.footer-brand h2 {
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.footer-brand h2 span {
+  color: #f59e0b;
+}
+
+.footer-brand > p {
+  max-width: 320px;
+
+  margin: 0;
+
+  color: #d6c7bf;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   SOCIAL MEDIA
+======================================== */
+
+.footer-social {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #3d2a21;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  /*
+    Framer Motion controls:
+    transform / scale / y
+  */
+  transition: background 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: #b45309;
+}
+
+
+/* ========================================
+   FOOTER LINKS
+======================================== */
+
+.footer-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.footer-links h3,
+.footer-newsletter h3 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer-links a {
+  width: fit-content;
+
+  color: #d6c7bf;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  /*
+    Framer Motion controls horizontal movement.
+    CSS only controls color.
+  */
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #f59e0b;
+}
+
+
+/* ========================================
+   NEWSLETTER
+======================================== */
+
+.footer-newsletter > p {
+  margin: 0 0 20px;
+
+  color: #d6c7bf;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   NEWSLETTER BOX
+======================================== */
+
+.newsletter-box {
+  width: 100%;
+  height: 48px;
+
+  display: flex;
+
+  overflow: hidden;
+
+  border: 1px solid #59443a;
+  border-radius: 8px;
+
+  background: #35251e;
+
+  box-sizing: border-box;
+}
+
+.newsletter-box input {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 0 14px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 13px;
+}
+
+.newsletter-box input::placeholder {
+  color: #a9978e;
+}
+
+
+/* ========================================
+   NEWSLETTER BUTTON
+======================================== */
+
+.newsletter-box button {
+  width: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: none;
+
+  background: #b45309;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  /*
+    Framer Motion controls movement.
+  */
+  transition: background 0.3s ease;
+}
+
+.newsletter-box button:hover {
+  background: #8f3f06;
+}
+
+
+/* ========================================
+   FOOTER BOTTOM
+======================================== */
+
+.footer-bottom {
+  min-height: 70px;
+
+  padding: 20px 8%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-top: 1px solid #4a352b;
+
+  box-sizing: border-box;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: #a9978e;
+
+  font-size: 13px;
+}
+
+.footer-made {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+.footer-made svg {
+  color: #f59e0b;
+}
+
+
+/* ========================================
+   LARGE DESKTOP
+   1440px+
+======================================== */
+
+@media (min-width: 1440px) {
+
+  .footer-container {
+    max-width: 1400px;
+
+    padding: 80px 6% 60px;
+
+    gap: 70px;
+  }
+
+  .footer-brand h2 {
+    font-size: 34px;
+  }
+
+  .footer-brand > p {
+    font-size: 15px;
+  }
+
+  .footer-links h3,
+  .footer-newsletter h3 {
+    font-size: 19px;
+  }
+}
+
+
+/* ========================================
+   DESKTOP
+   1200px - 1439px
+======================================== */
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+
+  .footer-container {
+    padding: 70px 8% 55px;
+
+    gap: 45px;
+  }
+}
+
+
+/* ========================================
+   LAPTOP
+   992px - 1199px
+======================================== */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .footer-container {
+    padding: 60px 6% 45px;
+
+    grid-template-columns:
+      1.3fr
+      0.8fr
+      0.8fr
+      1.2fr;
+
+    gap: 30px;
+  }
+
+  .footer-brand h2 {
+    font-size: 27px;
+  }
+
+  .footer-brand > p {
+    font-size: 13px;
+  }
+
+  .footer-links h3,
+  .footer-newsletter h3 {
+    font-size: 17px;
+  }
+
+  .footer-links a,
+  .footer-newsletter > p {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    padding: 20px 6%;
+  }
+}
+
+
+/* ========================================
+   TABLET
+   768px - 991px
+======================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .footer-container {
+    padding: 60px 5% 45px;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 40px 30px;
+  }
+
+  .footer-brand h2 {
+    font-size: 27px;
+  }
+
+  .footer-brand > p {
+    font-size: 13px;
+  }
+
+  .footer-links h3,
+  .footer-newsletter h3 {
+    font-size: 17px;
+  }
+
+  .footer-links a,
+  .footer-newsletter > p {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    padding: 20px 5%;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+   Below 768px
+======================================== */
+
+@media (max-width: 767px) {
+
+  .footer-container {
+    padding: 55px 7% 40px;
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .footer-brand {
+    max-width: 500px;
+  }
+
+  .footer-brand h2 {
+    font-size: 28px;
+  }
+
+  .footer-brand > p {
+    max-width: 400px;
+
+    font-size: 14px;
+  }
+
+  .footer-links {
+    gap: 10px;
+  }
+
+  .footer-links h3,
+  .footer-newsletter h3 {
+    font-size: 18px;
+  }
+
+  .footer-links a,
+  .footer-newsletter > p {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    padding: 20px 7%;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 10px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+   Below 480px
+======================================== */
+
+@media (max-width: 480px) {
+
+  .footer-container {
+    padding: 50px 6% 35px;
+
+    gap: 30px;
+  }
+
+  .footer-brand h2 {
+    font-size: 25px;
+  }
+
+  .footer-brand > p {
+    font-size: 13px;
+  }
+
+  .footer-social {
+    margin-top: 20px;
+  }
+
+  .footer-social a {
+    width: 38px;
+    height: 38px;
+
+    font-size: 15px;
+  }
+
+  .footer-links h3,
+  .footer-newsletter h3 {
+    font-size: 17px;
+  }
+
+  .footer-links a,
+  .footer-newsletter > p {
+    font-size: 13px;
+  }
+
+  .newsletter-box {
+    height: 46px;
+  }
+
+  .newsletter-box input {
+    font-size: 12px;
+  }
+
+  .newsletter-box button {
+    width: 46px;
+  }
+
+  .footer-bottom {
+    padding: 18px 6%;
+  }
+}
+
+
+/* ========================================
+   VERY SMALL MOBILE
+   Below 360px
+======================================== */
+
+@media (max-width: 360px) {
+
+  .footer-container {
+    padding: 45px 6% 30px;
+  }
+
+  .footer-brand h2 {
+    font-size: 23px;
+  }
+
+  .footer-brand > p {
+    font-size: 12px;
+  }
+
+  .footer-links h3,
+  .footer-newsletter h3 {
+    font-size: 16px;
+  }
+
+  .footer-links a,
+  .footer-newsletter > p {
+    font-size: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 11px;
+  }
+}

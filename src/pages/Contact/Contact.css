@@ -1,0 +1,706 @@
+/* ========================================
+   CONTACT SECTION
+======================================== */
+
+.contact {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 90px 8%;
+
+  background: #fffaf5;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   CONTACT HEADING
+======================================== */
+
+.contact-heading {
+  max-width: 700px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.contact-heading > p:first-child {
+  margin-bottom: 12px;
+
+  color: #b45309;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.contact-heading h1 {
+  margin: 0;
+
+  color: #2b1b14;
+
+  font-size: 48px;
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.contact-heading h1 span {
+  color: #b45309;
+}
+
+.contact-heading > p:last-child {
+  max-width: 600px;
+
+  margin: 18px auto 0;
+
+  color: #6b5b53;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   CONTACT CONTAINER
+======================================== */
+
+.contact-container {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: start;
+}
+
+
+/* ========================================
+   CONTACT INFO
+======================================== */
+
+.contact-info {
+  padding: 35px 0;
+
+  will-change: transform, opacity;
+}
+
+.contact-info h2 {
+  margin: 0 0 20px;
+
+  color: #2b1b14;
+
+  font-size: 34px;
+  line-height: 1.25;
+
+  font-weight: 800;
+}
+
+.contact-info h2 span {
+  color: #b45309;
+}
+
+.contact-text {
+  max-width: 500px;
+
+  margin: 0 0 35px;
+
+  color: #75665e;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   CONTACT ITEM
+======================================== */
+
+.contact-item {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 25px;
+
+  will-change: transform, opacity;
+}
+
+
+/* ========================================
+   CONTACT ICON
+======================================== */
+
+.contact-icon {
+  min-width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f5e3d1;
+  color: #b45309;
+
+  font-size: 18px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/*
+   Framer Motion handles the scale.
+   Do NOT use transform here.
+*/
+
+.contact-item:hover .contact-icon {
+  background: #b45309;
+  color: #ffffff;
+}
+
+
+/* ========================================
+   CONTACT ITEM TEXT
+======================================== */
+
+.contact-item h3 {
+  margin: 0 0 5px;
+
+  color: #2b1b14;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.contact-item p {
+  margin: 0;
+
+  color: #75665e;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* ========================================
+   CONTACT FORM
+======================================== */
+
+.contact-form {
+  padding: 35px;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 40px rgba(70, 40, 20, 0.08);
+
+  will-change: transform, opacity;
+}
+
+.contact-form h2 {
+  margin: 0 0 25px;
+
+  color: #2b1b14;
+
+  font-size: 27px;
+  font-weight: 700;
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+.contact-form form {
+  width: 100%;
+}
+
+
+/* ========================================
+   FORM GROUP
+======================================== */
+
+.form-group {
+  margin-bottom: 20px;
+
+  will-change: transform, opacity;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #3c2b24;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* ========================================
+   INPUT + TEXTAREA
+======================================== */
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  border: 1px solid #e5d8cf;
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #fffaf5;
+  color: #2b1b14;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.form-group input {
+  height: 48px;
+}
+
+.form-group textarea {
+  min-height: 130px;
+
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a99b93;
+}
+
+
+/* ========================================
+   INPUT FOCUS
+======================================== */
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #b45309;
+
+  background: #ffffff;
+
+  box-shadow: 0 0 0 3px rgba(180, 83, 9, 0.08);
+}
+
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
+.contact-submit {
+  width: 100%;
+
+  min-height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #b45309;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease;
+
+  will-change: transform;
+}
+
+
+/*
+   Framer Motion handles scale.
+   Keep only the background hover here.
+*/
+
+.contact-submit:hover {
+  background: #8f3f06;
+}
+
+
+/* ========================================
+   BUTTON ICON
+======================================== */
+
+.contact-submit span {
+  display: flex;
+  align-items: center;
+}
+
+
+/* ========================================
+   LARGE DESKTOP
+   1440px+
+======================================== */
+
+@media (min-width: 1440px) {
+
+  .contact {
+    padding: 110px 10%;
+  }
+
+  .contact-heading {
+    margin-bottom: 70px;
+  }
+
+  .contact-heading h1 {
+    font-size: 54px;
+  }
+
+  .contact-heading > p:last-child {
+    font-size: 18px;
+  }
+
+  .contact-container {
+    max-width: 1300px;
+
+    gap: 80px;
+  }
+
+  .contact-info h2 {
+    font-size: 38px;
+  }
+
+  .contact-form {
+    padding: 40px;
+  }
+}
+
+
+/* ========================================
+   DESKTOP
+   1200px - 1439px
+======================================== */
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+
+  .contact {
+    padding: 90px 8%;
+  }
+
+  .contact-container {
+    gap: 50px;
+  }
+}
+
+
+/* ========================================
+   LAPTOP
+   992px - 1199px
+======================================== */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .contact {
+    padding: 80px 6%;
+  }
+
+  .contact-heading h1 {
+    font-size: 42px;
+  }
+
+  .contact-heading > p:last-child {
+    font-size: 16px;
+  }
+
+  .contact-container {
+    gap: 35px;
+  }
+
+  .contact-info h2 {
+    font-size: 30px;
+  }
+
+  .contact-form {
+    padding: 28px;
+  }
+}
+
+
+/* ========================================
+   TABLET
+   768px - 991px
+======================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .contact {
+    padding: 70px 5%;
+  }
+
+  .contact-heading {
+    margin-bottom: 45px;
+  }
+
+  .contact-heading h1 {
+    font-size: 38px;
+  }
+
+  .contact-heading > p:last-child {
+    font-size: 15px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+  }
+
+  .contact-info {
+    padding: 20px 0;
+  }
+
+  .contact-info h2 {
+    font-size: 26px;
+  }
+
+  .contact-text {
+    font-size: 14px;
+  }
+
+  .contact-item {
+    gap: 13px;
+
+    margin-bottom: 20px;
+  }
+
+  .contact-icon {
+    min-width: 45px;
+    height: 45px;
+
+    font-size: 16px;
+  }
+
+  .contact-form {
+    padding: 25px;
+  }
+
+  .contact-form h2 {
+    font-size: 23px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+   Below 768px
+======================================== */
+
+@media (max-width: 767px) {
+
+  .contact {
+    padding: 60px 5%;
+  }
+
+  .contact-heading {
+    margin-bottom: 40px;
+  }
+
+  .contact-heading > p:first-child {
+    font-size: 13px;
+  }
+
+  .contact-heading h1 {
+    font-size: 34px;
+  }
+
+  .contact-heading > p:last-child {
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .contact-info {
+    padding: 0;
+  }
+
+  .contact-info h2 {
+    font-size: 27px;
+  }
+
+  .contact-text {
+    font-size: 14px;
+  }
+
+  .contact-form {
+    padding: 25px;
+
+    border-radius: 16px;
+  }
+
+  .contact-form h2 {
+    font-size: 23px;
+  }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+   Below 480px
+======================================== */
+
+@media (max-width: 480px) {
+
+  .contact {
+    padding: 50px 5%;
+  }
+
+  .contact-heading h1 {
+    font-size: 30px;
+  }
+
+  .contact-heading > p:last-child {
+    font-size: 13px;
+  }
+
+  .contact-info h2 {
+    font-size: 24px;
+  }
+
+  .contact-text {
+    font-size: 13px;
+  }
+
+  .contact-item {
+    gap: 12px;
+  }
+
+  .contact-icon {
+    min-width: 43px;
+    height: 43px;
+
+    font-size: 15px;
+  }
+
+  .contact-item h3 {
+    font-size: 15px;
+  }
+
+  .contact-item p {
+    font-size: 13px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form h2 {
+    font-size: 21px;
+  }
+
+  .form-group input {
+    height: 45px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 13px;
+  }
+
+  .contact-submit {
+    min-height: 48px;
+
+    font-size: 14px;
+  }
+}
+
+
+/* ========================================
+   VERY SMALL MOBILE
+   Below 360px
+======================================== */
+
+@media (max-width: 360px) {
+
+  .contact-heading h1 {
+    font-size: 27px;
+  }
+
+  .contact-info h2 {
+    font-size: 22px;
+  }
+
+  .contact-form {
+    padding: 18px;
+  }
+
+  .contact-form h2 {
+    font-size: 20px;
+  }
+
+  .contact-item {
+    gap: 10px;
+  }
+
+  .contact-icon {
+    min-width: 40px;
+    height: 40px;
+
+    font-size: 14px;
+  }
+
+  .contact-item h3 {
+    font-size: 14px;
+  }
+
+  .contact-item p {
+    font-size: 12px;
+  }
+}
+
+
+/* ========================================
+   REDUCED MOTION
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .contact *,
+  .contact *::before,
+  .contact *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

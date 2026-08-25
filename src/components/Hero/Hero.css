@@ -1,0 +1,505 @@
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  width: 100%;
+  min-height: calc(100vh - 75px);
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  padding: 80px 8%;
+
+  color: #ffffff;
+}
+
+
+/* ========================================
+   BACKGROUND VIDEO
+======================================== */
+
+.hero-video {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+}
+
+
+/* ========================================
+   DARK OVERLAY
+======================================== */
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  z-index: 1;
+}
+
+
+/* ========================================
+   HERO CONTENT
+======================================== */
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 700px;
+}
+
+
+/* ========================================
+   SUBTITLE
+======================================== */
+
+.hero-subtitle {
+  margin: 0 0 18px;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  color: #ffffff;
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.hero-content h1 {
+  margin: 0;
+
+  font-size: 72px;
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+}
+
+.hero-content h1 span {
+  color: #f59e0b;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.hero-description {
+  max-width: 600px;
+
+  margin: 25px 0 35px;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* ========================================
+   BUTTONS CONTAINER
+======================================== */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+/* ========================================
+   BUTTON MOTION WRAPPER
+======================================== */
+
+.hero-buttons > div {
+  display: inline-flex;
+}
+
+
+/* ========================================
+   PRIMARY BUTTON
+======================================== */
+
+.primary-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 15px 25px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #8f3f06;
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.primary-btn:hover {
+  background: #f59e0b;
+
+  color: #ffffff;
+
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+}
+
+
+/* ========================================
+   PRIMARY BUTTON ARROW
+======================================== */
+
+.primary-btn span {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ========================================
+   SECONDARY BUTTON
+======================================== */
+
+.secondary-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 14px 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: #ffffff;
+
+  color: #8f3f06;
+
+  border-color: #ffffff;
+}
+
+
+/* ========================================
+   PLAY ICON
+======================================== */
+
+.secondary-btn span {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ========================================
+   LARGE DESKTOP
+   1440px+
+======================================== */
+
+@media (min-width: 1440px) {
+
+  .hero {
+    padding: 100px 10%;
+  }
+
+  .hero-content {
+    max-width: 800px;
+  }
+
+  .hero-content h1 {
+    font-size: 82px;
+  }
+
+  .hero-description {
+    font-size: 20px;
+  }
+}
+
+
+/* ========================================
+   DESKTOP
+   1200px - 1439px
+======================================== */
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+
+  .hero {
+    padding: 90px 8%;
+  }
+
+  .hero-content h1 {
+    font-size: 70px;
+  }
+}
+
+
+/* ========================================
+   LAPTOP
+   992px - 1199px
+======================================== */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .hero {
+    min-height: calc(100vh - 75px);
+
+    padding: 70px 6%;
+  }
+
+  .hero-content {
+    max-width: 620px;
+  }
+
+  .hero-content h1 {
+    font-size: 60px;
+  }
+
+  .hero-description {
+    font-size: 17px;
+  }
+}
+
+
+/* ========================================
+   TABLET
+   768px - 991px
+======================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .hero {
+    min-height: calc(100vh - 70px);
+
+    padding: 60px 5%;
+  }
+
+  .hero-content {
+    max-width: 600px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 52px;
+  }
+
+  .hero-description {
+    max-width: 520px;
+
+    margin: 20px 0 30px;
+
+    font-size: 16px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    padding: 13px 20px;
+
+    font-size: 15px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+   Below 768px
+======================================== */
+
+@media (max-width: 767px) {
+
+  .hero {
+    min-height: calc(100vh - 65px);
+
+    padding: 50px 6%;
+
+    align-items: center;
+  }
+
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.62);
+  }
+
+  .hero-content {
+    width: 100%;
+
+    max-width: 100%;
+
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    margin-bottom: 15px;
+
+    font-size: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 44px;
+
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    max-width: 500px;
+
+    margin: 20px auto 30px;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    padding: 12px 18px;
+
+    font-size: 14px;
+  }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+   Below 480px
+======================================== */
+
+@media (max-width: 480px) {
+
+  .hero {
+    min-height: calc(100vh - 62px);
+
+    padding: 40px 5%;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-description {
+    margin: 18px auto 25px;
+
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .hero-buttons > div {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+
+    max-width: 260px;
+
+    padding: 13px 18px;
+  }
+}
+
+
+/* ========================================
+   VERY SMALL MOBILE
+   Below 360px
+======================================== */
+
+@media (max-width: 360px) {
+
+  .hero-content h1 {
+    font-size: 33px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    max-width: 230px;
+  }
+}

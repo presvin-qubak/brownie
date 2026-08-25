@@ -1,0 +1,90 @@
+/* ========================================
+   FLOATING SCROLL TOP BUTTON
+======================================== */
+
+.scroll-top-button {
+  position: fixed;
+
+  right: 25px;
+  bottom: 30px;
+
+  width: 50px;
+  height: 50px;
+
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #fff7e6 50%,
+    #f59e0b 100%
+  );
+
+  color: #8f3f06;
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 25px rgba(143, 63, 6, 0.25);
+
+  z-index: 9999;
+
+  transition: all 0.3s ease;
+}
+
+
+/* ========================================
+   HOVER
+======================================== */
+
+.scroll-top-button:hover {
+  background: #8f3f06;
+
+  color: #ffffff;
+
+  transform: translateY(-5px);
+
+  box-shadow: 0 12px 30px rgba(143, 63, 6, 0.35);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 767px) {
+
+  .scroll-top-button {
+    right: 18px;
+    bottom: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    font-size: 15px;
+  }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+
+  .scroll-top-button {
+    right: 15px;
+    bottom: 18px;
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 14px;
+  }
+}
