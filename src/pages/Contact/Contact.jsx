@@ -140,7 +140,7 @@ function Contact() {
 
         <p>
           Have a question, special request, or simply want
-          to say hello? We'd love to hear from you.
+          to say hello? We&apos;d love to hear from you.
         </p>
 
       </motion.div>
@@ -172,7 +172,7 @@ function Contact() {
         >
 
           <h2>
-            Let's Talk About
+            Let&apos;s Talk About
             <span> Something Delicious</span>
           </h2>
 

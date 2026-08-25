@@ -439,8 +439,8 @@ function Category() {
           </h3>
 
           <p>
-            We couldn't find anything matching
-            <strong> "{search}"</strong>.
+            We couldn&apos;t find anything matching
+            <strong> &quot;{search}&quot;</strong>.
           </p>
 
           <NavLink
