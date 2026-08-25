@@ -579,7 +579,7 @@ function Navbar() {
               <motion.div variants={linkVariants}>
 
                 <NavLink
-                  to="/"
+                  to="/brownie"
                   end
                   onClick={() =>
                     setSidebarOpen(false)
