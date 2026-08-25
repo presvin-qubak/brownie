@@ -23,7 +23,7 @@ function App() {
 
         {/* Home */}
         <Route
-          path="/"
+          path="/brownie"
           element={<Home />}
         />
 
