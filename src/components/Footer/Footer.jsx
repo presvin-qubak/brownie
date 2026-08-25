@@ -186,7 +186,7 @@ function Footer() {
           <motion.div
             whileHover={{ x: 5 }}
           >
-            <Link to="/">
+            <Link to="/brownie">
               Home
             </Link>
           </motion.div>
