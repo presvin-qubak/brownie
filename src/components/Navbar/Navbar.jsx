@@ -11,58 +11,45 @@ import {
 
 import "./Navbar.css";
 
-
 function Navbar() {
-
   const navigate = useNavigate();
 
   const [searchOpen, setSearchOpen] = useState(false);
   const [search, setSearch] = useState("");
-
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
 
   /* ========================================
      SEARCH FUNCTION
   ======================================== */
 
   const handleSearch = (e) => {
-
     const value = e.target.value;
 
     setSearch(value);
 
-    // Don't navigate when empty
     if (!value.trim()) {
       return;
     }
 
-    // Send search text to Category page
     navigate(
       `/category?search=${encodeURIComponent(value)}`
     );
-
   };
-
 
   /* ========================================
      CLOSE SEARCH
   ======================================== */
 
   const closeSearch = () => {
-
     setSearchOpen(false);
     setSearch("");
-
   };
-
 
   /* ========================================
      ANIMATIONS
   ======================================== */
 
   const sidebarVariants = {
-
     hidden: {
       x: "-100%",
     },
@@ -84,12 +71,9 @@ function Navbar() {
         ease: "easeIn",
       },
     },
-
   };
 
-
   const overlayVariants = {
-
     hidden: {
       opacity: 0,
     },
@@ -109,12 +93,9 @@ function Navbar() {
         duration: 0.25,
       },
     },
-
   };
 
-
   const linksContainerVariants = {
-
     hidden: {
       opacity: 0,
     },
@@ -127,12 +108,9 @@ function Navbar() {
         staggerChildren: 0.08,
       },
     },
-
   };
 
-
   const linkVariants = {
-
     hidden: {
       opacity: 0,
       x: -30,
@@ -146,12 +124,9 @@ function Navbar() {
         duration: 0.3,
       },
     },
-
   };
 
-
   const logoVariants = {
-
     hidden: {
       opacity: 0,
       x: -20,
@@ -165,20 +140,15 @@ function Navbar() {
         duration: 0.5,
       },
     },
-
   };
 
-
   return (
-
     <>
-
       {/* ========================================
           NAVBAR
       ======================================== */}
 
       <nav className="navbar">
-
 
         {/* ========================================
             LOGO
@@ -189,21 +159,17 @@ function Navbar() {
           initial="hidden"
           animate="visible"
         >
-
           <NavLink
             to="/"
             className="logo"
             onClick={closeSearch}
           >
-
             <FaUtensils />
 
             <span>
               Tempting World
             </span>
-
           </NavLink>
-
         </motion.div>
 
 
@@ -213,13 +179,18 @@ function Navbar() {
 
         <div className="nav-links">
 
+          {/* HOME */}
+
           <NavLink
-            to="/brownie"
+            to="/"
             end
             onClick={closeSearch}
           >
             Home
           </NavLink>
+
+
+          {/* CATEGORY */}
 
           <NavLink
             to="/category"
@@ -228,12 +199,18 @@ function Navbar() {
             Category
           </NavLink>
 
+
+          {/* ABOUT */}
+
           <NavLink
             to="/about"
             onClick={closeSearch}
           >
             About
           </NavLink>
+
+
+          {/* CONTACT */}
 
           <NavLink
             to="/contact"
@@ -251,42 +228,31 @@ function Navbar() {
 
         <div className="nav-icons">
 
-
           {/* ========================================
               SEARCH
           ======================================== */}
 
           <motion.div
-
             className={`search-container ${
               searchOpen ? "search-open" : ""
             }`}
-
             animate={{
               width: searchOpen ? 220 : 40,
             }}
-
             transition={{
               duration: 0.35,
               ease: "easeInOut",
             }}
-
           >
 
             <AnimatePresence>
 
               {searchOpen && (
-
                 <motion.input
-
                   type="text"
-
                   placeholder="Search brownies..."
-
                   value={search}
-
                   onChange={handleSearch}
-
                   autoFocus
 
                   initial={{
@@ -307,9 +273,7 @@ function Navbar() {
                   transition={{
                     duration: 0.25,
                   }}
-
                 />
-
               )}
 
             </AnimatePresence>
@@ -318,26 +282,22 @@ function Navbar() {
             {/* SEARCH / CLOSE BUTTON */}
 
             <motion.button
-
               type="button"
-
               className="search-button"
 
               onClick={() => {
-
                 if (searchOpen) {
-
                   closeSearch();
-
                 } else {
-
                   setSearchOpen(true);
-
                 }
-
               }}
 
-              aria-label="Search"
+              aria-label={
+                searchOpen
+                  ? "Close search"
+                  : "Open search"
+              }
 
               whileHover={{
                 scale: 1.08,
@@ -346,7 +306,6 @@ function Navbar() {
               whileTap={{
                 scale: 0.9,
               }}
-
             >
 
               <AnimatePresence mode="wait">
@@ -371,9 +330,7 @@ function Navbar() {
                       opacity: 0,
                     }}
                   >
-
                     <FaTimes />
-
                   </motion.span>
 
                 ) : (
@@ -396,9 +353,7 @@ function Navbar() {
                       opacity: 0,
                     }}
                   >
-
                     <FaSearch />
-
                   </motion.span>
 
                 )}
@@ -415,14 +370,12 @@ function Navbar() {
           ======================================== */}
 
           <motion.button
-
             type="button"
-
             className="menu-button"
 
-            onClick={() =>
-              setSidebarOpen(true)
-            }
+            onClick={() => {
+              setSidebarOpen(true);
+            }}
 
             aria-label="Open menu"
 
@@ -433,13 +386,9 @@ function Navbar() {
             whileTap={{
               scale: 0.9,
             }}
-
           >
-
             <FaBars />
-
           </motion.button>
-
 
         </div>
 
@@ -452,58 +401,43 @@ function Navbar() {
 
       <AnimatePresence>
 
-
         {/* OVERLAY */}
 
         {sidebarOpen && (
-
           <motion.div
-
             className="sidebar-overlay"
 
             variants={overlayVariants}
 
             initial="hidden"
-
             animate="visible"
-
             exit="exit"
 
-            onClick={() =>
-              setSidebarOpen(false)
-            }
-
+            onClick={() => {
+              setSidebarOpen(false);
+            }}
           />
-
         )}
 
 
         {/* SIDEBAR */}
 
         {sidebarOpen && (
-
           <motion.aside
-
             className="sidebar"
 
             variants={sidebarVariants}
 
             initial="hidden"
-
             animate="visible"
-
             exit="exit"
-
           >
-
 
             {/* SIDEBAR HEADER */}
 
             <div className="sidebar-header">
 
-
               <motion.div
-
                 className="sidebar-logo"
 
                 initial={{
@@ -520,27 +454,22 @@ function Navbar() {
                   delay: 0.25,
                   duration: 0.4,
                 }}
-
               >
-
                 <FaUtensils />
 
                 <span>
                   Tempting World
                 </span>
-
               </motion.div>
 
 
               <motion.button
-
                 type="button"
-
                 className="sidebar-close"
 
-                onClick={() =>
-                  setSidebarOpen(false)
-                }
+                onClick={() => {
+                  setSidebarOpen(false);
+                }}
 
                 aria-label="Close menu"
 
@@ -552,11 +481,8 @@ function Navbar() {
                 whileTap={{
                   scale: 0.85,
                 }}
-
               >
-
                 <FaTimes />
-
               </motion.button>
 
             </div>
@@ -565,25 +491,25 @@ function Navbar() {
             {/* SIDEBAR LINKS */}
 
             <motion.div
-
               className="sidebar-links"
 
               variants={linksContainerVariants}
 
               initial="hidden"
-
               animate="visible"
-
             >
+
+              {/* HOME */}
 
               <motion.div variants={linkVariants}>
 
                 <NavLink
-                  to="/brownie"
+                  to="/"
                   end
-                  onClick={() =>
-                    setSidebarOpen(false)
-                  }
+
+                  onClick={() => {
+                    setSidebarOpen(false);
+                  }}
                 >
                   Home
                 </NavLink>
@@ -591,13 +517,16 @@ function Navbar() {
               </motion.div>
 
 
+              {/* CATEGORY */}
+
               <motion.div variants={linkVariants}>
 
                 <NavLink
                   to="/category"
-                  onClick={() =>
-                    setSidebarOpen(false)
-                  }
+
+                  onClick={() => {
+                    setSidebarOpen(false);
+                  }}
                 >
                   Category
                 </NavLink>
@@ -605,13 +534,16 @@ function Navbar() {
               </motion.div>
 
 
+              {/* ABOUT */}
+
               <motion.div variants={linkVariants}>
 
                 <NavLink
                   to="/about"
-                  onClick={() =>
-                    setSidebarOpen(false)
-                  }
+
+                  onClick={() => {
+                    setSidebarOpen(false);
+                  }}
                 >
                   About
                 </NavLink>
@@ -619,13 +551,16 @@ function Navbar() {
               </motion.div>
 
 
+              {/* CONTACT */}
+
               <motion.div variants={linkVariants}>
 
                 <NavLink
                   to="/contact"
-                  onClick={() =>
-                    setSidebarOpen(false)
-                  }
+
+                  onClick={() => {
+                    setSidebarOpen(false);
+                  }}
                 >
                   Contact
                 </NavLink>
@@ -635,16 +570,11 @@ function Navbar() {
             </motion.div>
 
           </motion.aside>
-
         )}
 
       </AnimatePresence>
-
     </>
-
   );
-
 }
-
 
 export default Navbar;
