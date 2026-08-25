@@ -214,7 +214,7 @@ function Navbar() {
         <div className="nav-links">
 
           <NavLink
-            to="/"
+            to="/brownie"
             end
             onClick={closeSearch}
           >
